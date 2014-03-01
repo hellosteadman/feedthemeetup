@@ -139,6 +139,7 @@ img {
 
 .intro-desc {
 	font-size: 1.2em;
+	line-height: 1.5;
 }
 
 /* Features */
@@ -146,6 +147,26 @@ img {
 .feature {
 	padding-top: 5em;
 	padding-bottom: 5em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+.feature-text {
+	float: left;
+	width: 45%;
+	&.right {
+		float: right;
+	}
+}
+
+.feature-image {
+	float: right;
+	width: 50%;
+	padding-left: 50px;
+	&.left {
+		float: left;
+		padding-left: 0;
+		padding-right: 50px;
+	}
 }
 
 .feature-one {
@@ -240,6 +261,25 @@ input[type='checkbox'] {
 	margin: 0;
 	font-weight: normal;
 	font-size: 20px;
+}
+
+/* Footer */
+
+.page-footer {
+	background-color: #1d1d1d;
+	color: #fff;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.twitter {
+		color: #92ccf7;
+	}
+	.facebook {
+		color: #7494d4;
+	}
 }
 
 /* Animation */

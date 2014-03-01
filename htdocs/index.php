@@ -71,26 +71,46 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<?php if($_SERVER['REQUEST_METHOD'] != 'POST' || $total == -1) { ?>
 			<header class="intro center-text">
 				<div class="layout-width">
-					<h1 class="headline">Feed your event</h1>
-					<p class="intro-desc no-spacing">With nutritious and ethical dishes that do good for society.</p>
+					<h1 class="headline animated bounceInLeft">Feed your event</h1>
+					<p class="intro-desc animated bounceInLeft no-spacing">Looking for a caterer but no idea what you need? Then you've come to the right place. Find out more about the unique opportunity you have to feed your event, while helping help the less privileged. Then use our handy calculator to get costs, hints and tips on how to cater for your event.</p>
 				</div>
 			</header>
 			<div class="feature feature-one">
 				<div class="layout-width">
-					<h2>Info about events</h2>
-					<p class="no-spacing">Lorem ipsum sit dolor.</p>
+					<div class="feature-text">
+						<h2>Food Glorious Food</h2>
+						<p>We offer a range of innovative, award winning food carefully put together using the finest local, organic and seasonal ingredients.</p>
+						<p class="no-spacing">Our menus cater for all events, from small meetups to large conferences, to weddings and corporate lunches. We shape our menus around the seasonal produce available at the time of the event, so there'll be roasted squash risottos in the autumn and crisp Evesham asparagus spears in spring. Fresh, local, seasonal and delicious.</p>
+					</div>
+					<div class="feature-image">
+						<img src="images/feature-one-image.png" />
+					</div>
 				</div>
 			</div>
 			<div class="feature feature-two">
 				<div class="layout-width">
-					<h2>Info about food</h2>
-					<p class="no-spacing">Lorem ipsum sit dolor</p>
+					<div class="feature-text right">
+						<h2>Trust me I'm a Caterer</h2>
+						<p>From "grab bags to go" and "help your self platters" through to "knife &amp; fork round-table" lunches, we corporate catering can offer the perfect solution for your corporate event.</p>
+						<p>Our talented and knowledgeable team are on hand to help with planning and organising the catering for your event so you can concentrate on other points safe in the knowledge your guests will be well fed.</p>
+						<p class="no-spacing">Our service is available nationally, whether you're looking to cater a single service "ready to serve" lunch event, all day conference or a full week's pop up kitchen for a corporate getaway.</p>
+					</div>
+					<div class="feature-image left">
+						<img src="images/feature-two-image.png" />
+					</div>
 				</div>
 			</div>
 			<div class="feature feature-three">
 				<div class="layout-width">
-					<h2>We do good</h2>
-					<p class="no-spacing">Lorem ipsum sit dolor.</p>
+					<div class="feature-text">
+						<h2>By the people for the people!</h2>
+						<p>ChangeKitchen's mission is to be part of a revolution that turns access to healthy eating away from a privilege to a right for everyone.</p>
+						<p>We're a social enterprise, proud to be cooking up change for disadvantaged people in  Birmingham, as well as delicious food.</p>
+						<p class="no-spacing">The single biggest difference between ChangeKitchen and other event caterers is that we create and serve our food differently; we want our clients and customers to celebrate sharing a meal, as well as fuelling their bodies.</p>
+					</div>
+					<div class="feature-image">
+						<img src="images/feature-three-image.png" />
+					</div>
 				</div>
 			</div>
 			<section class="form-area">
@@ -158,7 +178,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			</section>
 			<footer class="page-footer">
 				<div class="layout-width">
-					
+					<p class="no-spacing">Follow us on <a href="https://twitter.com/changekitchen" class="twitter">Twitter</a> and <a href="https://www.facebook.com/ChangeKitchen" class="facebook">Facebook</a>.</p>
 				</div>
 			</footer>
 		<?php } else { ?>
