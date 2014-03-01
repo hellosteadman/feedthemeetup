@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$total = floatVal(0);
 			
 			foreach(select('mealprice') as $price) {
-				if(isset($_POST[strtolower($price['name'])])) {
+				if(isset($_POST[str_replace(' ', '_', strtolower($price['name']))])) {
 					$meals ++;
 					$total += floatVal($price['price']);
 				}
@@ -137,7 +137,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 				
 						<?php foreach(select('mealprice') as $price) { ?>
 							<p class="checkbox-wrap">
-								<input type="checkbox" id="event-meals-<?php echo strtolower($price['name']); ?>" class="checkbox-with-label" name="<?php echo strtolower($price['name']); ?>" value="1" <?php if(isset($_POST[strtolower($price['name'])])) { echo 'checked'; } ?> /><label for="event-meals-<?php echo strtolower($price['name']); ?>" class="label-with-checkbox"><?php echo $price['name']; ?></label>
+								<input type="checkbox" id="event-meals-<?php echo str_replace(' ', '_', strtolower($price['name'])); ?>" class="checkbox-with-label" name="<?php echo str_replace(' ', '_', strtolower($price['name'])); ?>" value="1" <?php if(isset($_POST[str_replace(' ', '_', strtolower($price['name']))])) { echo 'checked'; } ?> /><label for="event-meals-<?php echo str_replace(' ', '_', strtolower($price['name'])); ?>" class="label-with-checkbox"><?php echo $price['name']; ?></label>
 							</p>
 						<?php } ?>
 				
