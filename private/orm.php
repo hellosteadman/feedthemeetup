@@ -10,15 +10,21 @@ function open_database() {
 
 function migrate_database() {
 	global $dbFilename;
+	$from = isset($_GET['from']) ? intVal($_GET['from']) : 0;
 	
-	if(is_file('db.sqlite')) {
+	if(!$from && is_file('db.sqlite')) {
 		unlink('db.sqlite');
 	}
 	
 	$sql = new SQLite3($dbFilename, SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE);
-	foreach(glob(dirname(__file__) . '/schema/*.sql') as $migration) {
-		print($migration . '<br />');
-		$sql->query(file_get_contents($migration));
+	foreach(glob(dirname(__file__) . '/schema/*.sql') as $index => $migration) {
+		if($index < $from) {
+			continue;
+		}
+		
+		$query = file_get_contents($migration);
+		print('<pre>' . $query . '</pre>');
+		$sql->query($query);
 	}
 	
 	foreach(glob(dirname(__file__) . '/data/*.json') as $data) {

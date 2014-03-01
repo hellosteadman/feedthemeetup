@@ -1,0 +1,1 @@
+alter table quotation add column notes text;

@@ -37,6 +37,10 @@ open_database(); ?><!DOCTYPE html>
 						<li>
 							<a href="/admin/quotations/">Quotations</a>
 						</li>
+						
+						<li>
+							<a href="/admin/eventtypes/">Event types</a>
+						</li>
 					</ul>
 					
 					<ul class="nav navbar-nav pull-right">
