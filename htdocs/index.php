@@ -33,18 +33,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			}
 			
 			$statement .= ')';
-			// run_query($statement, $post);
+			run_query($statement, $post);
 			
 			$meals = 0;
 			$total = floatVal(0);
-
+			
 			foreach(select('mealprice') as $price) {
 				if(isset($_POST[strtolower($price['name'])])) {
 					$meals ++;
 					$total += floatVal($price['price']);
 				}
 			}
-
+			
 			$total *= (intVal($post['covers']) * intVal($post['days']));
 		}
 	}
