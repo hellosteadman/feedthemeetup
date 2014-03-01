@@ -12,6 +12,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 				continue;
 			}
 			
+			if($column['name'] == 'require_canopes') {
+				continue;
+			}
+			
+			if($column['name'] == 'require_drinks') {
+				continue;
+			}
+			
+			if($column['name'] == 'require_cutlery') {
+				continue;
+			}
+			
 			if(!$column['notnull']) {
 				if(!$value) {
 					$valid = false;
@@ -30,6 +42,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			
 			if(substr($statement, strlen($statement) - 2) == ', ') {
 				$statement = substr($statement, 0, strlen($statement) - 2);
+			}
+			
+			if(!isset($post['require_canopes'])) {
+				$post['require_canopes'] = 0;
+			}
+			
+			if(!isset($post['require_drinks'])) {
+				$post['require_drinks'] = 0;
+			}
+			
+			if(!isset($post['require_cutlery'])) {
+				$post['require_cutlery'] = 0;
 			}
 			
 			$statement .= ')';
